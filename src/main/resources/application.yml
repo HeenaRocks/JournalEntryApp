@@ -1,0 +1,71 @@
+spring:
+    profiles:
+      active: dev
+    security:
+      oauth2:
+        client:
+          registration:
+            google:
+              client-id: ${GOOGLE_CLIENT_ID}
+              client-secret: ${GOOGLE_CLIENT_SECRET}
+
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: heenakousaribrahim@gmail.com
+      password: attk ukep xfiw kbhm
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+
+weather:
+  api:
+    key: b1fe1de7cee917abdf20421017579ab9
+
+#    kafka:
+#      bootstrap-servers: ${KAFKA_SERVERS}
+#      producer:
+#        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#      consumer:
+#        group-id: weekly-sentiment-group
+#        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#        properties:
+#          spring:
+#            json:
+#              trusted:
+#                packages: net.engineeringdigest.journalApp.model
+#      properties:
+#        security:
+#          protocol: SASL_SSL
+#        sasl:
+#          mechanism: PLAIN
+#          jaas:
+#            config: org.apache.kafka.common.security.plain.PlainLoginModule required username='X' password='X';
+#        session:
+#          timeout:
+#            ms: 45000
+
+#logging:
+#  level:
+#    net:
+#      engineeringdigest:
+#        journalApp:
+#          service:
+#            UserService: OFF
+
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb+srv://heena:kousar@cluster0.xwhsr9d.mongodb.net/?appName=Cluster0
+#      database: journaldb
+#      auto-index-creation: true
+#
+#server:
+#  port: 8081
+##  servlet:
+##    context-path: /journal
